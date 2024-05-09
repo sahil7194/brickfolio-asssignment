@@ -1,8 +1,12 @@
 <div class="card" style="width: 18rem;">
-  <img src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg" class="card-img-top" alt="...">
+  <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">
+      {{product.title}}
+    </h5>
+    <p class="card-text">
+      {{product.description}}
+    </p>
+    <a routerLink="products/{{product.id}}" class="btn btn-info">more info</a>
   </div>
 </div>
